@@ -1,0 +1,208 @@
+[
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "get_digit",
+        "kind": 2,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "def get_digit(digit):                               \n    current = result_label['text']\n    new = current + str(digit) \n    result_label.config(text=new)\ndef clear():                                        # FUnction of clear the Screen \n    result_label.config(text='')\ndef get_operator(op):                               #Function of operator working \n    global first_number,operator \n    first_number = int(result_label['text'])\n    operator = op",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "clear",
+        "kind": 2,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "def clear():                                        # FUnction of clear the Screen \n    result_label.config(text='')\ndef get_operator(op):                               #Function of operator working \n    global first_number,operator \n    first_number = int(result_label['text'])\n    operator = op\n    result_label.config(text='')\ndef get_result():                                     # Function to get the result \n    global first_number,second_number,operator\n    second_number = int(result_label['text'])",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "get_operator",
+        "kind": 2,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "def get_operator(op):                               #Function of operator working \n    global first_number,operator \n    first_number = int(result_label['text'])\n    operator = op\n    result_label.config(text='')\ndef get_result():                                     # Function to get the result \n    global first_number,second_number,operator\n    second_number = int(result_label['text'])\n    if operator == '+':\n        result_label.config(text=str(first_number+second_number))",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "get_result",
+        "kind": 2,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "def get_result():                                     # Function to get the result \n    global first_number,second_number,operator\n    second_number = int(result_label['text'])\n    if operator == '+':\n        result_label.config(text=str(first_number+second_number))\n    elif operator == '-':\n        result_label.config(text=str(first_number-second_number))\n    elif operator == '*':\n        result_label.config(text=str(first_number*second_number))\n    else: ",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "root = Tk()\nroot.title(\"Calculator\")            #Title of the GUI\nroot.geometry('280x380')            #to set the size of GUI screen\nroot.resizable(0,0)\nroot.configure(background='black')   #To set the background Colour\nresult_label = Label(root,text='',bg='black',fg='white')\nresult_label.grid(row=0,column=0,columnspan=5,pady=(50,25),sticky='w')                           #Make grid USing .grid\nresult_label.config(font=('verdana',30,'bold'))\nbtn7 = Button(root,text='7',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(7))  #Applied Button \nbtn7.grid(row=1,column=0)",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "result_label",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "result_label = Label(root,text='',bg='black',fg='white')\nresult_label.grid(row=0,column=0,columnspan=5,pady=(50,25),sticky='w')                           #Make grid USing .grid\nresult_label.config(font=('verdana',30,'bold'))\nbtn7 = Button(root,text='7',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(7))  #Applied Button \nbtn7.grid(row=1,column=0)\nbtn7.config(font=('verdana',14))\nbtn8 = Button(root,text='8',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(8))\nbtn8.grid(row=1,column=1)\nbtn8.config(font=('verdana',14))\nbtn9 = Button(root,text='9',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(9))",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "btn7",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "btn7 = Button(root,text='7',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(7))  #Applied Button \nbtn7.grid(row=1,column=0)\nbtn7.config(font=('verdana',14))\nbtn8 = Button(root,text='8',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(8))\nbtn8.grid(row=1,column=1)\nbtn8.config(font=('verdana',14))\nbtn9 = Button(root,text='9',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(9))\nbtn9.grid(row=1,column=2 )\nbtn9.config(font=('verdana',14))\nbtn_add = Button(root,text='+',bg='grey',fg='white',width=5,height=2,command= lambda :get_operator('+'))",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "btn8",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "btn8 = Button(root,text='8',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(8))\nbtn8.grid(row=1,column=1)\nbtn8.config(font=('verdana',14))\nbtn9 = Button(root,text='9',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(9))\nbtn9.grid(row=1,column=2 )\nbtn9.config(font=('verdana',14))\nbtn_add = Button(root,text='+',bg='grey',fg='white',width=5,height=2,command= lambda :get_operator('+'))\nbtn_add.grid(row=1,column=3)\nbtn_add.config(font=('verdana',14))\nbtn4 = Button(root,text='4',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(4))",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "btn9",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "btn9 = Button(root,text='9',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(9))\nbtn9.grid(row=1,column=2 )\nbtn9.config(font=('verdana',14))\nbtn_add = Button(root,text='+',bg='grey',fg='white',width=5,height=2,command= lambda :get_operator('+'))\nbtn_add.grid(row=1,column=3)\nbtn_add.config(font=('verdana',14))\nbtn4 = Button(root,text='4',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(4))\nbtn4.grid(row=3,column=0 )\nbtn4.config(font=('verdana',14))\nbtn5 = Button(root,text='5',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(5))",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "btn_add",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "btn_add = Button(root,text='+',bg='grey',fg='white',width=5,height=2,command= lambda :get_operator('+'))\nbtn_add.grid(row=1,column=3)\nbtn_add.config(font=('verdana',14))\nbtn4 = Button(root,text='4',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(4))\nbtn4.grid(row=3,column=0 )\nbtn4.config(font=('verdana',14))\nbtn5 = Button(root,text='5',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(5))\nbtn5.grid(row=3,column=1 )\nbtn5.config(font=('verdana',14))\nbtn6 = Button(root,text='6',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(6))",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "btn4",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "btn4 = Button(root,text='4',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(4))\nbtn4.grid(row=3,column=0 )\nbtn4.config(font=('verdana',14))\nbtn5 = Button(root,text='5',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(5))\nbtn5.grid(row=3,column=1 )\nbtn5.config(font=('verdana',14))\nbtn6 = Button(root,text='6',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(6))\nbtn6.grid(row=3,column=2 )\nbtn6.config(font=('verdana',14))\nbtn_sub = Button(root,text='-',bg='grey',fg='white',width=5,height=2,command= lambda :get_operator('-'))",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "btn5",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "btn5 = Button(root,text='5',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(5))\nbtn5.grid(row=3,column=1 )\nbtn5.config(font=('verdana',14))\nbtn6 = Button(root,text='6',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(6))\nbtn6.grid(row=3,column=2 )\nbtn6.config(font=('verdana',14))\nbtn_sub = Button(root,text='-',bg='grey',fg='white',width=5,height=2,command= lambda :get_operator('-'))\nbtn_sub.grid(row=3,column=3 )\nbtn_sub.config(font=('verdana',14))\nbtn1 = Button(root,text='1',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(1))",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "btn6",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "btn6 = Button(root,text='6',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(6))\nbtn6.grid(row=3,column=2 )\nbtn6.config(font=('verdana',14))\nbtn_sub = Button(root,text='-',bg='grey',fg='white',width=5,height=2,command= lambda :get_operator('-'))\nbtn_sub.grid(row=3,column=3 )\nbtn_sub.config(font=('verdana',14))\nbtn1 = Button(root,text='1',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(1))\nbtn1.grid(row=4,column=0 )\nbtn1.config(font=('verdana',14))\nbtn2 = Button(root,text='2',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(2))",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "btn_sub",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "btn_sub = Button(root,text='-',bg='grey',fg='white',width=5,height=2,command= lambda :get_operator('-'))\nbtn_sub.grid(row=3,column=3 )\nbtn_sub.config(font=('verdana',14))\nbtn1 = Button(root,text='1',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(1))\nbtn1.grid(row=4,column=0 )\nbtn1.config(font=('verdana',14))\nbtn2 = Button(root,text='2',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(2))\nbtn2.grid(row=4,column=1 )\nbtn2.config(font=('verdana',14))\nbtn3 = Button(root,text='3',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(3))",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "btn1",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "btn1 = Button(root,text='1',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(1))\nbtn1.grid(row=4,column=0 )\nbtn1.config(font=('verdana',14))\nbtn2 = Button(root,text='2',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(2))\nbtn2.grid(row=4,column=1 )\nbtn2.config(font=('verdana',14))\nbtn3 = Button(root,text='3',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(3))\nbtn3.grid(row=4,column=2 )\nbtn3.config(font=('verdana',14))\nbtn_miltiply = Button(root,text='X',bg='grey',fg='white',width=5,height=2,command= lambda :get_operator('*'))",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "btn2",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "btn2 = Button(root,text='2',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(2))\nbtn2.grid(row=4,column=1 )\nbtn2.config(font=('verdana',14))\nbtn3 = Button(root,text='3',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(3))\nbtn3.grid(row=4,column=2 )\nbtn3.config(font=('verdana',14))\nbtn_miltiply = Button(root,text='X',bg='grey',fg='white',width=5,height=2,command= lambda :get_operator('*'))\nbtn_miltiply.grid(row=4,column=3 )\nbtn_miltiply.config(font=('verdana',14))\nbtn0 = Button(root,text='0',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(0))",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "btn3",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "btn3 = Button(root,text='3',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(3))\nbtn3.grid(row=4,column=2 )\nbtn3.config(font=('verdana',14))\nbtn_miltiply = Button(root,text='X',bg='grey',fg='white',width=5,height=2,command= lambda :get_operator('*'))\nbtn_miltiply.grid(row=4,column=3 )\nbtn_miltiply.config(font=('verdana',14))\nbtn0 = Button(root,text='0',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(0))\nbtn0.grid(row=5,column=0 )\nbtn0.config(font=('verdana',14))\nbtn_clear = Button(root,text='C',bg='grey',fg='white',width=5,height=2,command=lambda :clear())",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "btn_miltiply",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "btn_miltiply = Button(root,text='X',bg='grey',fg='white',width=5,height=2,command= lambda :get_operator('*'))\nbtn_miltiply.grid(row=4,column=3 )\nbtn_miltiply.config(font=('verdana',14))\nbtn0 = Button(root,text='0',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(0))\nbtn0.grid(row=5,column=0 )\nbtn0.config(font=('verdana',14))\nbtn_clear = Button(root,text='C',bg='grey',fg='white',width=5,height=2,command=lambda :clear())\nbtn_clear.grid(row=5,column=1 )\nbtn_clear.config(font=('verdana',14))\nbtn_divide = Button(root,text='/',bg='grey',fg='white',width=5,height=2,command= lambda :get_operator('/'))",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "btn0",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "btn0 = Button(root,text='0',bg='grey',fg='white',width=5,height=2,command=lambda :get_digit(0))\nbtn0.grid(row=5,column=0 )\nbtn0.config(font=('verdana',14))\nbtn_clear = Button(root,text='C',bg='grey',fg='white',width=5,height=2,command=lambda :clear())\nbtn_clear.grid(row=5,column=1 )\nbtn_clear.config(font=('verdana',14))\nbtn_divide = Button(root,text='/',bg='grey',fg='white',width=5,height=2,command= lambda :get_operator('/'))\nbtn_divide.grid(row=5,column=2 )\nbtn_divide.config(font=('verdana',14))\nbtn_equal = Button(root,text='=',bg='orange',fg='white',width=5,height=2,command=get_result)",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "btn_clear",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "btn_clear = Button(root,text='C',bg='grey',fg='white',width=5,height=2,command=lambda :clear())\nbtn_clear.grid(row=5,column=1 )\nbtn_clear.config(font=('verdana',14))\nbtn_divide = Button(root,text='/',bg='grey',fg='white',width=5,height=2,command= lambda :get_operator('/'))\nbtn_divide.grid(row=5,column=2 )\nbtn_divide.config(font=('verdana',14))\nbtn_equal = Button(root,text='=',bg='orange',fg='white',width=5,height=2,command=get_result)\nbtn_equal.grid(row=5,column=3 )\nbtn_equal.config(font=('verdana',14))\nroot.mainloop()",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "btn_divide",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "btn_divide = Button(root,text='/',bg='grey',fg='white',width=5,height=2,command= lambda :get_operator('/'))\nbtn_divide.grid(row=5,column=2 )\nbtn_divide.config(font=('verdana',14))\nbtn_equal = Button(root,text='=',bg='orange',fg='white',width=5,height=2,command=get_result)\nbtn_equal.grid(row=5,column=3 )\nbtn_equal.config(font=('verdana',14))\nroot.mainloop()",
+        "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "btn_equal",
+        "kind": 5,
+        "importPath": "calculator",
+        "description": "calculator",
+        "peekOfCode": "btn_equal = Button(root,text='=',bg='orange',fg='white',width=5,height=2,command=get_result)\nbtn_equal.grid(row=5,column=3 )\nbtn_equal.config(font=('verdana',14))\nroot.mainloop()",
+        "detail": "calculator",
+        "documentation": {}
+    }
+]
