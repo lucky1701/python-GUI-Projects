@@ -8,6 +8,50 @@
         "documentation": {}
     },
     {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "pyperclip",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyperclip",
+        "description": "pyperclip",
+        "detail": "pyperclip",
+        "documentation": {}
+    },
+    {
+        "label": "copy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "copy",
+        "description": "copy",
+        "detail": "copy",
+        "documentation": {}
+    },
+    {
         "label": "get_digit",
         "kind": 2,
         "importPath": "calculator",
@@ -203,6 +247,33 @@
         "description": "calculator",
         "peekOfCode": "btn_equal = Button(root,text='=',bg='orange',fg='white',width=5,height=2,command=get_result)\nbtn_equal.grid(row=5,column=3 )\nbtn_equal.config(font=('verdana',14))\nroot.mainloop()",
         "detail": "calculator",
+        "documentation": {}
+    },
+    {
+        "label": "generator",
+        "kind": 2,
+        "importPath": "PasswordGenerator",
+        "description": "PasswordGenerator",
+        "peekOfCode": "def generator():\n    small_alphabets=string.ascii_lowercase\n    capital_alphabets=string.ascii_uppercase\n    numbers=string.digits\n    special_characters=string.punctuation\n    all=small_alphabets+capital_alphabets+numbers+special_characters\n    password_length=int(length_box.get())\n    if choice.get() == 1:\n        Password_Field.insert(0,random.sample(small_alphabets,password_length))\n    if choice.get() == 2:",
+        "detail": "PasswordGenerator",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "PasswordGenerator",
+        "description": "PasswordGenerator",
+        "peekOfCode": "root = Tk() \nroot.config(bg='gray20')\nchoice = IntVar()\nFont=('arial',13,'bold')\npasswordlabel=Label(root,text='Password Generator',font=('times new roman',20,'bold'),bg='gray20',fg='white')\npasswordlabel.grid(pady=10)\nweakradioButton=Radiobutton(root,text='weak',value=1,variable=choice,font=Font)\nweakradioButton.grid(pady=5)\nmediumradioButton=Radiobutton(root,text='Medum',value=2,variable=choice,font=Font)\nmediumradioButton.grid(pady=5)",
+        "detail": "PasswordGenerator",
+        "documentation": {}
+    },
+    {
+        "label": "choice",
+        "kind": 5,
+        "importPath": "PasswordGenerator",
+        "description": "PasswordGenerator",
+        "peekOfCode": "choice = IntVar()\nFont=('arial',13,'bold')\npasswordlabel=Label(root,text='Password Generator',font=('times new roman',20,'bold'),bg='gray20',fg='white')\npasswordlabel.grid(pady=10)\nweakradioButton=Radiobutton(root,text='weak',value=1,variable=choice,font=Font)\nweakradioButton.grid(pady=5)\nmediumradioButton=Radiobutton(root,text='Medum',value=2,variable=choice,font=Font)\nmediumradioButton.grid(pady=5)\nstrongradioButton=Radiobutton(root,text='Strong',value=3,variable=choice,font=Font)\nstrongradioButton.grid(pady=5)",
+        "detail": "PasswordGenerator",
         "documentation": {}
     }
 ]
